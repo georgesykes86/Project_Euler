@@ -14,40 +14,19 @@ public class MultipleCalculatorTest {
         calculator = new MultipleCalculator();
     }
 
-
     @Test
-    public void threeIsMultipleOfThreeTest() {
-        assertTrue(calculator.isMultipleOfThree(3));
+    public void eightIsSumOfMultiplesOfThreeAndFiveBelowSix() {
+        assertEquals(8, calculator.sumMultiplesOfThreeAndFiveBelow(6));
     }
 
     @Test
-    public void sixIsMultipleOfThreeTest() {
-        assertTrue(calculator.isMultipleOfThree(6));
+    public void twentyThreeIsSumOfMultiplesOfThreeAndFiveBelowTen() {
+        assertEquals(23, calculator.sumMultiplesOfThreeAndFiveBelow(10));
     }
 
     @Test
-    public void fiveIsNotMutplipleOfThree() {
-        assertFalse(calculator.isMultipleOfThree(5));
-    }
-
-    @Test
-    public void eightIsNotMultipleOfThree() {
-        assertFalse(calculator.isMultipleOfThree(8));
-    }
-
-    @Test
-    public void fiveIsMultipleOfFive() {
-        assertTrue(calculator.isMultipleOfFive(5));
-    }
-
-    @Test
-    public void sixIsNotMultipleOfFive() {
-        assertFalse(calculator.isMultipleOfFive(6));
-    }
-
-    @Test
-    public void tenIsMultipleOfFive() {
-        assertTrue(calculator.isMultipleOfFive(10));
+    public void testForAllMultiplesOfThreeAndFiveBelowOneThousand() {
+        assertEquals(233168, calculator.sumMultiplesOfThreeAndFiveBelow(1000));
     }
 
 }
